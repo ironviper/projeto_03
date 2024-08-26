@@ -1,0 +1,728 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+
+    scroll-behavior: smooth;
+    scroll-margin-top: 90px;
+}
+
+:root {
+    --logo: #7469C9;
+    --logo-dark: #484554;
+    --logo-light: #ADA9BB;
+
+    --bg-header: #fff;
+
+    --bg-light: #CEAFFF;
+
+    --text-light: #7469c9;
+
+}
+
+
+
+
+/*#region Font classes */
+._font-yaldevi-extra-light {
+    font-family: "Yaldevi", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-style: normal;
+}
+._font-yaldevi-light {
+    font-family: "Yaldevi", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+}
+._font-yaldevi-regular {
+    font-family: "Yaldevi", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+._font-yaldevi-medium {
+    font-family: "Yaldevi", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+._font-yaldevi-bold {
+    font-family: "Yaldevi", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+}
+/*#endregion */
+
+/*#region Layout Utility classes */
+.wrapper {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+}
+/*#endregion */
+
+
+
+
+/*#region Media queries */
+@media (min-width: 576px)
+{
+    .wrapper {
+        max-width: 540px;
+    }
+}
+
+@media (min-width: 768px)
+{
+    .wrapper {
+        max-width: 720px;
+    }
+}
+
+@media (min-width: 992px)
+{
+    .wrapper {
+        max-width: 960px;
+    }
+}
+
+@media (min-width: 1200px)
+{
+    .wrapper {
+        max-width: 1140px;
+    }
+}
+
+@media (min-width: 1400px)
+{
+    .wrapper {
+        max-width: 1320px;
+    }
+}
+
+
+/*#endregion */
+
+
+header > .wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+}
+
+body {
+    background-color: var(--logo-dark);
+
+}
+
+
+.section__title {
+    font-size: 2.5rem;
+}
+
+/*#region header */
+
+header {
+    height: 90px;
+
+    background-color: var(--bg-header);
+
+    position: sticky;
+    top: 0;
+    z-index: 1020;
+
+    padding: 1.5rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.header__logo {
+    height: 100%;
+}
+.header__logo svg {
+    height: 100%;
+}
+
+.header__menu {
+    background-color: var(--bg-header);
+    font-size: 1.5rem;
+}
+/* Open the dropdown menu without any JavaScript */
+.header__dropdown-menu-btn:has(>.hamburger-btn.hamburger-btn_open) + .header__menu {
+    grid-template-rows: 1fr;
+    padding: 0.5rem;
+    transition: grid-template-rows 500ms, padding 0ms 0ms;
+}
+
+.header__menu-list {
+    list-style: none;
+
+    grid-row: 1;
+
+    overflow: hidden;
+
+}
+/* .header__menu-item {
+    
+} */
+.header__menu-link {
+    text-decoration: none;
+
+    color: var(--logo);
+}
+
+
+.header__dropdown-menu-btn {
+    height: 100%;
+    aspect-ratio: 1;
+}
+
+
+
+/*#region Media queries */
+@media (min-width: 1px) and (max-width: 996px)
+{
+    .header__menu {
+        /* Used display: grid to make it possible to transition from 0fr to 1fr to open the dropdown menu. */
+        display: grid;
+        grid-template-rows: 0fr;
+        padding: 0;
+        /* Used transition in the padding so when the dropdown menu is closed it doesn't take up space in the header */
+        transition: grid-template-rows 500ms, padding 500ms 0ms;
+    
+        overflow: hidden;
+
+        position: absolute;
+        top: 100%;
+        left: 0;
+
+        width: 100%;
+    }
+    .header__menu-item {
+        border-top: 2px var(--logo) solid; 
+        padding-block: 0.5rem;
+    }
+
+}
+
+@media (min-width: 997px)
+{
+    .header__dropdown-menu-btn {
+        display: none;
+    }
+
+    .header__menu-item {
+        display: inline;
+
+        border-left: 2px var(--logo) solid;
+        padding-inline: 0.5rem;
+    }
+}
+
+/*#endregion */
+
+
+/*#endregion */
+
+
+
+/*#region About-us section  */
+#about-us {
+    background-color: var(--logo-light);
+    color: #000;
+    padding-block: 2rem;
+}
+#about-us > .wrapper {
+    display: flex;
+
+}
+
+.about-us__carousel-wrapper {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.about-us__carousel {
+    width: 100%;
+    aspect-ratio: 1.5;
+
+    max-height: 400px;
+}
+.about-us__carousel .carousel-cell {
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+.about-us__carousel .carousel-cell img {
+    max-width: 100%;
+    margin: auto;
+    object-fit: cover;
+}
+.about-us__text-wrapper {
+    width: 100%;
+}
+.about-us__description {
+    margin-top: 1rem;
+}
+
+
+@media (min-width: 1px) and (max-width: 768px)
+{
+    #about-us > .wrapper {
+        flex-direction: column;
+    }
+    .about-us__text-wrapper {
+        margin-top: 1rem;
+    }
+}
+
+@media (min-width: 769px)
+{
+    .about-us__text-wrapper {
+        margin-left: 1rem;
+    }
+}
+
+
+
+/*#endregion */
+
+/*#region Our-team section */
+
+#our-team {
+    color: #fff;
+    padding-block: 2rem;
+}
+
+.our-team__cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+    row-gap: 2rem;
+    column-gap: 3rem;
+
+    margin-top: 2rem;
+}
+.our-team__job-name {
+    font-size: 2rem;
+
+    text-align: center;
+    margin-bottom: 1rem;
+
+    color: var(--bg-light);
+}
+
+.our-team__cards .card-team {
+    width: 100%;
+}
+
+/*#endregion */
+
+/*#region Our-services section */
+#our-services {
+    background-color: var(--logo-light);
+    color: #000;
+
+    padding-block: 2rem;
+}
+
+.our-services__cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+    row-gap: 2rem;
+    column-gap: 3rem;
+
+    margin-top: 2rem;
+}
+.our-services__cards .card-services {
+    width: 100%;
+}
+
+
+/*#endregion */
+
+
+/*#region Schedule section */
+
+#schedule {
+    padding-block: 2rem;
+    color: #fff;
+}
+
+.schedule__form-wrapper {
+    margin-top: 2rem;
+} 
+
+.schedule__form,
+.schedule__form input {
+    font-size: 1.5rem;
+}
+.schedule__form .schedule__form-field:not(:last-child) {
+    margin-bottom: 1.5rem;
+}
+
+.schedule__form-field {
+    display: flex;
+    flex-direction: column;
+}
+.schedule__form-field input {
+    border-radius: 6px;
+}
+
+.schedule__form button {
+    cursor: pointer;
+    padding: 0.5rem;
+    font-size: 1rem;
+
+    
+    outline: none;
+    border: none;
+    
+    color: var(--bg-light);
+    background-color: var(--logo);
+
+    border-radius: 6px;
+}
+.schedule__form button:active {
+    color: var(--logo);
+    background-color: var(--bg-light);
+}
+
+@media (min-width: 769px)
+{
+    .schedule__form-wrapper {
+        width: 50%;
+    }
+}
+/*#endregion */
+
+/*#region footer */
+footer {
+    background-color: var(--logo-light);
+    padding: 0.5rem;
+    text-align: center;
+
+    color: var(--logo-dark);
+}
+
+
+/*#endregion */
+
+
+
+
+/*#region hamburger-btn */
+
+.hamburger-btn *{ /* Disable pointer events for all the children so the event listener works correctly watching clicks on ".hamburger-btn" */
+    pointer-events: none;
+}
+.hamburger-btn {
+    width: 100%;
+    height: 100%;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    /* Variables definition for the transition */
+    --transition-move-to-center-duration: 0.25s; /* Defines duration for half of the transition effect. */
+    --transition-rotate-duration: 0.25s;
+    --top-position: 50%; /* Defines to what position the .hamburger-btn__hamburger_hamburger-top and .hamburger-btn__hamburger_hamburger-bottom will be moved to. 50% is the middle of the container */
+    --rotation: 135deg; /* Defines how to many degress the .hamburger-btn__hamburger_hamburger-top and .hamburger-btn__hamburger_hamburger-bottom will turn. 135deg they turn a bit and end up crossed. */
+}
+
+.hamburger-btn__hamburgers-container { /* Used this div instead of padding in the ".hamburger-btn" div, to be able to set the size of this container proportionally to the size of the ".hamburger-btn", which is not possible to do with padding. */
+    width: 90%;
+    height: 90%;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.hamburger-btn__hamburger {
+    background-color: #7469C9;
+    
+    height: 10%;
+    
+    position: relative; /* Set position to relative, so the "top" property of ".hamburger-btn__hamburger_hamburger-top" and ".hamburger-btn__hamburger_hamburger-top" works based on the size of the parent div(this). */
+}
+
+.hamburger-btn .hamburger-btn__hamburger_hamburger-top,
+.hamburger-btn .hamburger-btn__hamburger_hamburger-bottom {
+    /* Set default values for the transition to work. */
+    top: 0%;
+
+    
+    transition-property: top, transform;
+
+    /* This transition will play when the mouse stops hovering. It is the same transition but backwards. */
+    transition-duration: var(--transition-move-to-center-duration), var(--transition-rotate-duration);
+    transition-delay: var(--transition-rotate-duration), 0s; /* Inverted delay for the backward playing. This is when the mouse is not hovering. */
+}
+
+.hamburger-btn .hamburger-btn__hamburger_hamburger-middle {
+    transition-property: opacity;
+
+    /* This transition will play when the mouse stops hovering. It is the same transition but backwards. */
+    transition-delay: var(--transition-rotate-duration); /* Only transition to "opacity: 1" after ".hamburger-btn__hamburger_hamburger-top" and ".hamburger-btn__hamburger_hamburger-bottom" are already rotated to the center. */
+}
+
+
+
+
+
+/* #region OPEN STATE */
+.hamburger-btn_open .hamburger-btn__hamburger_hamburger-top,
+.hamburger-btn_open .hamburger-btn__hamburger_hamburger-bottom {
+    /* Set the duration and delay for the forward transtion to work correctly. */
+    transition-duration: var(--transition-move-to-center-duration), var(--transition-rotate-duration);
+    transition-delay: 0s, var(--transition-move-to-center-duration); /* Delays the rotation transition, so it only begins after the "move-to-center" transition is finished */
+}
+.hamburger-btn_open .hamburger-btn__hamburger_hamburger-top {
+    translate: 0 -50%; /* Move the center of the "hamburger" to the top of the div ".hamburger-btn__hamburgers-container", so when set the "top: 50%" the "hamburger" ends up correctly in center of the ".hamburger-btn__hamburgers-container" div. */
+    
+    /* Set the final values for forward trasition of the top hamburger (when the mouse starts hovering). */
+    top: var(--top-position);
+    transform: rotateZ(var(--rotation));
+}
+.hamburger-btn_open .hamburger-btn__hamburger_hamburger-bottom {
+    translate: 0 50%; /* Move the center of the "hamburger" to the bottom of the div ".hamburger-btn__hamburgers-container", so when set the "top: 50%" the "hamburger" ends up correctly in center of the ".hamburger-btn__hamburgers-container" div. */
+
+    /* Adjust the final values for forward trasition of the bottom hamburger (when the mouse starts hovering). */
+    --_top-position: calc(var(--top-position) * -1);
+    --_rotation: calc(var(--rotation) * -1);
+    top: var(--_top-position);
+    transform: rotateZ(var(--_rotation));
+}
+.hamburger-btn_open .hamburger-btn__hamburger_hamburger-middle {
+    opacity: 0; /* Set final value for the transition . */
+
+    transition-delay: var(--transition-move-to-center-duration); /* Only transition to "opacity: 0" after ".hamburger-btn__hamburger_hamburger-top" and ".hamburger-btn__hamburger_hamburger-bottom" are already in the center. */
+}
+/*#endregion */
+
+
+
+/*#endregion */
+
+
+/*#region Card Team */
+
+.card-team {
+    position: relative;
+
+    width: 356px;
+
+    svg {
+        display: block;
+    }
+
+    /* Class for all division inside the card */
+    .divide {
+        width: 100%;
+        height: 2px;
+        background-color: var(--logo);
+    }
+
+    .card-content {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+
+        padding-inline: 2.25%;
+        padding-top: 20.505%;
+        padding-bottom: 16.713%;
+
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 52.69% 1fr;
+
+
+        .card-top-content {
+            grid-row: 1;
+
+            display: flex;
+            padding-left: 10.827%;
+
+            justify-content: space-between;
+
+            .card-top-left-content {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: space-between;
+
+                container-type: inline-size; /* Needed for container query */
+
+                width: 23.43%;
+
+                color: var(--logo);
+
+            }
+
+            img {
+                width: 75%;
+            }
+        }
+
+        .card-bottom-content {
+            container-type: inline-size;
+
+            grid-row: 2;
+
+            .card-name {
+                text-align: center;
+            }
+
+            .divide-padding {
+                padding-inline: 10.88%;
+            }
+
+            .card-description {
+                text-align: justify;
+                height: 51%;
+                overflow-y: auto;
+            }
+
+            .divide-padding-big {
+                margin-top: 6.617%;
+                padding-inline: 42.8%;
+            }
+        }
+    }
+}
+/* Set dynamic font-size for the card */
+@container (min-width: 1px) {
+    .card-number {
+        font-size: 100cqw;
+        line-height: 1em;
+    }
+    .card-letters {
+        font-size: 57.1cqw;
+        line-height: 1em;
+    }
+    .card-name {
+        font-size: 14.12cqw;
+    }
+    .card-description {
+        font-size: 4.71cqw;
+    }
+}
+
+/*#endregion Card Team */
+
+
+/*#region Card Services */
+
+
+.card-services,
+.card-services * {
+    pointer-events: none;
+}
+
+
+.card-services {
+    width: min-content;
+    min-width: 280px;
+
+    border-radius: 0.5rem;
+
+    background-color: var(--bg-light);
+
+    display: grid;
+    grid-template-rows: repeat(5, auto);
+
+    row-gap: 0.5rem;
+
+    padding: 0 1rem 1rem; /* Padding top=0, left,right,bottom=1rem */
+}
+
+.card-services__title {
+    grid-column: 1;
+    grid-row: 1;
+
+    font-size: 2rem;
+
+    /* white-space: nowrap;  Make the title never wrap, always stay in 1 line */
+}
+
+.card-services__img {
+    grid-column: 1;
+    grid-row: 2;
+    max-width: 100%;
+
+    border-radius: 6px;
+}
+
+.card-services__description {
+    grid-column: 1;
+    
+    font-size: 1rem;
+}
+.card-services__description_short {
+    grid-row: 3;
+}
+
+.card-services__description_long {
+    grid-row: 4;
+
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 1s;
+}
+.card-services__description_long p {
+    grid-row: 1;
+    overflow: hidden;
+}
+
+.card-services__btn {
+    pointer-events: all;
+
+    grid-column: 1;
+    grid-row: 5;
+
+    outline: none;
+    border: none;
+    background: none;
+
+    width: fit-content;
+
+    justify-self: end;
+
+    font-size: 1rem;
+
+}
+/* .card-services__btn_show-more {
+}
+.card-services__btn_show-less {
+} */
+
+.card-services_long-description-open  .card-services__description_long{
+    grid-template-rows: 1fr;
+}
+
+
+
+._display-none {
+    display: none;
+}
+
+
+/*#endregion */
+
+
+
+
+
