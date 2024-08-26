@@ -1,11 +1,8 @@
 
-
-
 * {
     margin: 0;
     padding: 0;
-    -webkit-box-sizing: border-box;
-            box-sizing: border-box;
+    box-sizing: border-box;
 
 
     scroll-behavior: smooth;
@@ -116,15 +113,9 @@
 
 
 header > .wrapper {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    align-items: center;
+    justify-content: space-between;
     height: 100%;
 }
 
@@ -151,17 +142,9 @@ header {
 
     padding: 1.5rem;
 
-    display: -webkit-box;
-
-    display: -ms-flexbox;
-
     display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    align-items: center;
+    justify-content: center;
 
 }
 .header__logo {
@@ -177,19 +160,13 @@ header {
 }
 /* Open the dropdown menu without any JavaScript */
 .header__dropdown-menu-btn:has(>.hamburger-btn.hamburger-btn_open) + .header__menu {
-    -ms-grid-rows: 1fr;
     grid-template-rows: 1fr;
     padding: 0.5rem;
-    -webkit-transition: grid-template-rows 500ms, padding 0ms 0ms;
-    -o-transition: grid-template-rows 500ms, padding 0ms 0ms;
     transition: grid-template-rows 500ms, padding 0ms 0ms;
-    transition: grid-template-rows 500ms, padding 0ms 0ms, -ms-grid-rows 500ms;
 }
 
 .header__menu-list {
     list-style: none;
-
-    -ms-grid-row: 1;
 
     grid-row: 1;
 
@@ -218,16 +195,11 @@ header {
 {
     .header__menu {
         /* Used display: grid to make it possible to transition from 0fr to 1fr to open the dropdown menu. */
-        display: -ms-grid;
         display: grid;
-        -ms-grid-rows: 0fr;
         grid-template-rows: 0fr;
         padding: 0;
         /* Used transition in the padding so when the dropdown menu is closed it doesn't take up space in the header */
-        -webkit-transition: grid-template-rows 500ms, padding 500ms 0ms;
-        -o-transition: grid-template-rows 500ms, padding 500ms 0ms;
         transition: grid-template-rows 500ms, padding 500ms 0ms;
-        transition: grid-template-rows 500ms, padding 500ms 0ms, -ms-grid-rows 500ms;
     
         overflow: hidden;
 
@@ -272,19 +244,13 @@ header {
     padding-block: 2rem;
 }
 #about-us > .wrapper {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
 
 }
 
 .about-us__carousel-wrapper {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    align-items: center;
     width: 100%;
 }
 
@@ -297,15 +263,12 @@ header {
 .about-us__carousel .carousel-cell {
     width: 100%;
     height: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
 }
 .about-us__carousel .carousel-cell img {
     max-width: 100%;
     margin: auto;
-    -o-object-fit: cover;
-       object-fit: cover;
+    object-fit: cover;
 }
 .about-us__text-wrapper {
     width: 100%;
@@ -318,10 +281,7 @@ header {
 @media (min-width: 1px) and (max-width: 768px)
 {
     #about-us > .wrapper {
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-            -ms-flex-direction: column;
-                flex-direction: column;
+        flex-direction: column;
     }
     .about-us__text-wrapper {
         margin-top: 1rem;
@@ -347,13 +307,10 @@ header {
 }
 
 .our-team__cards {
-    display: -ms-grid;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
     row-gap: 2rem;
-    -webkit-column-gap: 3rem;
-       -moz-column-gap: 3rem;
-            column-gap: 3rem;
+    column-gap: 3rem;
 
     margin-top: 2rem;
 }
@@ -381,13 +338,10 @@ header {
 }
 
 .our-services__cards {
-    display: -ms-grid;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
     row-gap: 2rem;
-    -webkit-column-gap: 3rem;
-       -moz-column-gap: 3rem;
-            column-gap: 3rem;
+    column-gap: 3rem;
 
     margin-top: 2rem;
 }
@@ -419,13 +373,8 @@ header {
 }
 
 .schedule__form-field {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    flex-direction: column;
 }
 .schedule__form-field input {
     border-radius: 6px;
@@ -482,17 +431,9 @@ footer {
     width: 100%;
     height: 100%;
     
-    display: -webkit-box;
-    
-    display: -ms-flexbox;
-    
     display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    align-items: center;
+    justify-content: center;
 
     /* Variables definition for the transition */
     --transition-move-to-center-duration: 0.25s; /* Defines duration for half of the transition effect. */
@@ -505,18 +446,9 @@ footer {
     width: 90%;
     height: 90%;
     
-    display: -webkit-box;
-    
-    display: -ms-flexbox;
-    
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .hamburger-btn__hamburger {
@@ -533,38 +465,18 @@ footer {
     top: 0%;
 
     
-    -webkit-transition-property: top, -webkit-transform;
-
-    
-    transition-property: top, -webkit-transform;
-
-    
-    -o-transition-property: top, transform;
-
-    
     transition-property: top, transform;
 
-    
-    transition-property: top, transform, -webkit-transform;
-
     /* This transition will play when the mouse stops hovering. It is the same transition but backwards. */
-    -webkit-transition-duration: var(--transition-move-to-center-duration), var(--transition-rotate-duration);
-         -o-transition-duration: var(--transition-move-to-center-duration), var(--transition-rotate-duration);
-            transition-duration: var(--transition-move-to-center-duration), var(--transition-rotate-duration);
-    -webkit-transition-delay: var(--transition-rotate-duration), 0s;
-         -o-transition-delay: var(--transition-rotate-duration), 0s;
-            transition-delay: var(--transition-rotate-duration), 0s; /* Inverted delay for the backward playing. This is when the mouse is not hovering. */
+    transition-duration: var(--transition-move-to-center-duration), var(--transition-rotate-duration);
+    transition-delay: var(--transition-rotate-duration), 0s; /* Inverted delay for the backward playing. This is when the mouse is not hovering. */
 }
 
 .hamburger-btn .hamburger-btn__hamburger_hamburger-middle {
-    -webkit-transition-property: opacity;
-    -o-transition-property: opacity;
     transition-property: opacity;
 
     /* This transition will play when the mouse stops hovering. It is the same transition but backwards. */
-    -webkit-transition-delay: var(--transition-rotate-duration);
-         -o-transition-delay: var(--transition-rotate-duration);
-            transition-delay: var(--transition-rotate-duration); /* Only transition to "opacity: 1" after ".hamburger-btn__hamburger_hamburger-top" and ".hamburger-btn__hamburger_hamburger-bottom" are already rotated to the center. */
+    transition-delay: var(--transition-rotate-duration); /* Only transition to "opacity: 1" after ".hamburger-btn__hamburger_hamburger-top" and ".hamburger-btn__hamburger_hamburger-bottom" are already rotated to the center. */
 }
 
 
@@ -575,21 +487,15 @@ footer {
 .hamburger-btn_open .hamburger-btn__hamburger_hamburger-top,
 .hamburger-btn_open .hamburger-btn__hamburger_hamburger-bottom {
     /* Set the duration and delay for the forward transtion to work correctly. */
-    -webkit-transition-duration: var(--transition-move-to-center-duration), var(--transition-rotate-duration);
-         -o-transition-duration: var(--transition-move-to-center-duration), var(--transition-rotate-duration);
-            transition-duration: var(--transition-move-to-center-duration), var(--transition-rotate-duration);
-    -webkit-transition-delay: 0s, var(--transition-move-to-center-duration);
-         -o-transition-delay: 0s, var(--transition-move-to-center-duration);
-            transition-delay: 0s, var(--transition-move-to-center-duration); /* Delays the rotation transition, so it only begins after the "move-to-center" transition is finished */
+    transition-duration: var(--transition-move-to-center-duration), var(--transition-rotate-duration);
+    transition-delay: 0s, var(--transition-move-to-center-duration); /* Delays the rotation transition, so it only begins after the "move-to-center" transition is finished */
 }
 .hamburger-btn_open .hamburger-btn__hamburger_hamburger-top {
     translate: 0 -50%; /* Move the center of the "hamburger" to the top of the div ".hamburger-btn__hamburgers-container", so when set the "top: 50%" the "hamburger" ends up correctly in center of the ".hamburger-btn__hamburgers-container" div. */
     
     /* Set the final values for forward trasition of the top hamburger (when the mouse starts hovering). */
     top: var(--top-position);
-    -webkit-transform: rotateZ(var(--rotation));
-        -ms-transform: rotate(var(--rotation));
-            transform: rotateZ(var(--rotation));
+    transform: rotateZ(var(--rotation));
 }
 .hamburger-btn_open .hamburger-btn__hamburger_hamburger-bottom {
     translate: 0 50%; /* Move the center of the "hamburger" to the bottom of the div ".hamburger-btn__hamburgers-container", so when set the "top: 50%" the "hamburger" ends up correctly in center of the ".hamburger-btn__hamburgers-container" div. */
@@ -598,18 +504,12 @@ footer {
     --_top-position: calc(var(--top-position) * -1);
     --_rotation: calc(var(--rotation) * -1);
     top: var(--_top-position);
-    -webkit-transform: rotateZ(var(--_rotation));
-        -ms-transform: rotate(var(--_rotation));
-            transform: rotateZ(var(--_rotation));
+    transform: rotateZ(var(--_rotation));
 }
 .hamburger-btn_open .hamburger-btn__hamburger_hamburger-middle {
     opacity: 0; /* Set final value for the transition . */
 
-    -webkit-transition-delay: var(--transition-move-to-center-duration);
-
-         -o-transition-delay: var(--transition-move-to-center-duration);
-
-            transition-delay: var(--transition-move-to-center-duration); /* Only transition to "opacity: 0" after ".hamburger-btn__hamburger_hamburger-top" and ".hamburger-btn__hamburger_hamburger-bottom" are already in the center. */
+    transition-delay: var(--transition-move-to-center-duration); /* Only transition to "opacity: 0" after ".hamburger-btn__hamburger_hamburger-top" and ".hamburger-btn__hamburger_hamburger-bottom" are already in the center. */
 }
 /*#endregion */
 
@@ -645,46 +545,24 @@ footer {
         padding-top: 20.505%;
         padding-bottom: 16.713%;
 
-        display: -ms-grid;
-
         display: grid;
-        -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
-        -ms-grid-rows: 52.69% 1fr;
         grid-template-rows: 52.69% 1fr;
 
 
         .card-top-content {
-            -ms-grid-row: 1;
             grid-row: 1;
-
-            display: -webkit-box;
-
-            display: -ms-flexbox;
 
             display: flex;
             padding-left: 10.827%;
 
-            -webkit-box-pack: justify;
-
-                -ms-flex-pack: justify;
-
-                    justify-content: space-between;
+            justify-content: space-between;
 
             .card-top-left-content {
-                display: -webkit-box;
-                display: -ms-flexbox;
                 display: flex;
-                -webkit-box-orient: vertical;
-                -webkit-box-direction: normal;
-                    -ms-flex-direction: column;
-                        flex-direction: column;
-                -webkit-box-align: center;
-                    -ms-flex-align: center;
-                        align-items: center;
-                -webkit-box-pack: justify;
-                    -ms-flex-pack: justify;
-                        justify-content: space-between;
+                flex-direction: column;
+                align-items: center;
+                justify-content: space-between;
 
                 container-type: inline-size; /* Needed for container query */
 
@@ -701,8 +579,6 @@ footer {
 
         .card-bottom-content {
             container-type: inline-size;
-
-            -ms-grid-row: 2;
 
             grid-row: 2;
 
@@ -725,16 +601,6 @@ footer {
                 padding-inline: 42.8%;
             }
         }
-    }
-
-    .card-content > *:nth-child(1) {
-        -ms-grid-row: 1;
-        -ms-grid-column: 1
-    }
-
-    .card-content > *:nth-child(2) {
-        -ms-grid-row: 2;
-        -ms-grid-column: 1
     }
 }
 /* Set dynamic font-size for the card */
@@ -768,8 +634,6 @@ footer {
 
 
 .card-services {
-    width: -webkit-min-content;
-    width: -moz-min-content;
     width: min-content;
     min-width: 280px;
 
@@ -777,10 +641,7 @@ footer {
 
     background-color: var(--bg-light);
 
-    display: -ms-grid;
-
     display: grid;
-    -ms-grid-rows: auto 0.5rem auto 0.5rem auto 0.5rem auto 0.5rem auto;
     grid-template-rows: repeat(5, auto);
 
     row-gap: 0.5rem;
@@ -789,9 +650,7 @@ footer {
 }
 
 .card-services__title {
-    -ms-grid-column: 1;
     grid-column: 1;
-    -ms-grid-row: 1;
     grid-row: 1;
 
     font-size: 2rem;
@@ -800,9 +659,7 @@ footer {
 }
 
 .card-services__img {
-    -ms-grid-column: 1;
     grid-column: 1;
-    -ms-grid-row: 2;
     grid-row: 2;
     max-width: 100%;
 
@@ -810,32 +667,22 @@ footer {
 }
 
 .card-services__description {
-    -ms-grid-column: 1;
     grid-column: 1;
     
     font-size: 1rem;
 }
 .card-services__description_short {
-    -ms-grid-row: 3;
     grid-row: 3;
 }
 
 .card-services__description_long {
-    -ms-grid-row: 4;
     grid-row: 4;
 
-    display: -ms-grid;
-
     display: grid;
-    -ms-grid-rows: 0fr;
     grid-template-rows: 0fr;
-    -webkit-transition: grid-template-rows 1s;
-    -o-transition: grid-template-rows 1s;
     transition: grid-template-rows 1s;
-    transition: grid-template-rows 1s, -ms-grid-rows 1s;
 }
 .card-services__description_long p {
-    -ms-grid-row: 1;
     grid-row: 1;
     overflow: hidden;
 }
@@ -843,25 +690,16 @@ footer {
 .card-services__btn {
     pointer-events: all;
 
-    -ms-grid-column: 1;
-
     grid-column: 1;
-    -ms-grid-row: 5;
     grid-row: 5;
 
     outline: none;
     border: none;
     background: none;
 
-    width: -webkit-fit-content;
-
-    width: -moz-fit-content;
-
     width: fit-content;
 
-    -ms-grid-column-align: end;
-
-        justify-self: end;
+    justify-self: end;
 
     font-size: 1rem;
 
@@ -872,7 +710,6 @@ footer {
 } */
 
 .card-services_long-description-open  .card-services__description_long{
-    -ms-grid-rows: 1fr;
     grid-template-rows: 1fr;
 }
 
@@ -884,6 +721,7 @@ footer {
 
 
 /*#endregion */
+
 
 
 
